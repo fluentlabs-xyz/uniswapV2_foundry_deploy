@@ -24,30 +24,20 @@ https://github.com/MarcusWentz/uniswapV2_foundry_deployment/blob/main/src/Uniswa
 forge create src/UniswapV2Factory.sol:UniswapV2Factory \
 --constructor-args-path src/deployConstructor/UniswapV2Factory.txt \
 --private-key $devTestnetPrivateKey \
---rpc-url https://rpc.dev.gblend.xyz/ \
+--rpc-url https://rpc.testnet.fluent.xyz \
 --broadcast \
 --verify \
 --verifier blockscout \
---verifier-url https://blockscout.dev.gblend.xyz/api/
+--verifier-url https://testnet.fluentscan.xyz/api/
 ```
 
 If contract verification fails after deployment, verify the contract at the deployed address:
 
 ```shell
 forge verify-contract \
---rpc-url https://rpc.dev.gblend.xyz/ \
+--rpc-url https://rpc.testnet.fluent.xyz \
 --constructor-args-path src/deployConstructor/UniswapV2Factory.txt \
 <contract_address> \
-src/UniswapV2Factory.sol:UniswapV2Factory  \
---verifier blockscout \
---verifier-url https://blockscout.dev.gblend.xyz/api/
-
-https://blockscout.dev.gblend.xyz/address/0x46d11169e79219b2830587d6b14172cc55dc29ac
-
-forge verify-contract \
---rpc-url https://rpc.dev.gblend.xyz/ \
---constructor-args-path src/deployConstructor/UniswapV2Factory.txt \
-0x46d11169e79219b2830587d6b14172cc55dc29ac \
 src/UniswapV2Factory.sol:UniswapV2Factory  \
 --verifier blockscout \
 --verifier-url https://blockscout.dev.gblend.xyz/api/
