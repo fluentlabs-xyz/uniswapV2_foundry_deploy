@@ -66,23 +66,23 @@ https://ethereum.stackexchange.com/questions/88075/uniswap-addliquidity-function
 forge create src/UniswapV2Router02.sol:UniswapV2Router02 \
 --constructor-args-path src/deployConstructor/UniswapV2Router02.txt \
 --private-key $devTestnetPrivateKey \
---rpc-url https://rpc.dev.gblend.xyz/ \
+--rpc-url https://rpc.testnet.fluent.xyz \
 --broadcast \
 --verify \
 --verifier blockscout \
---verifier-url https://blockscout.dev.gblend.xyz/api/
+--verifier-url https://testnet.fluentscan.xyz/api/
 ```
 
 If contract verification fails after deployment, verify the contract at the deployed address:
  
 ```shell
 forge verify-contract \
---rpc-url https://rpc.dev.gblend.xyz/ \
+--rpc-url https://rpc.testnet.fluent.xyz \
 --constructor-args-path src/deployConstructor/UniswapV2Router02.txt \
 <contract_address> \
 src/UniswapV2Router02.sol:UniswapV2Router02 \
 --verifier blockscout \
---verifier-url https://blockscout.dev.gblend.xyz/api/
+--verifier-url https://testnet.fluentscan.xyz/api/
 ```
 
 ### Step 5 (Optional): Verify UniswapV2Pair (ERC-20 LP token deployed from UniswapV2Factory): 
