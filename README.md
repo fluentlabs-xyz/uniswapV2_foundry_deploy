@@ -53,7 +53,7 @@ https://github.com/MarcusWentz/uniswapV2_foundry_deployment/blob/main/src/Uniswa
 🔴 Warning: Do not use this exact INIT_CODE_HASH in UniswapV2Router02 unless it matches your new INIT_CODE_HASH deployed from UniswapV2Factory
 
 ```solidity
-hex'295e81838c52ea539beeced4b28b067224b25534c7f513a6ee295364a9d3fe0d' // init code hash
+hex'cffad317eee0eafb23b811b0c051afaea213e52be9e2ab444e34b016651762ba' // init code hash
 ```
 
 🔴 Warning: if the INIT_CODE_HASH set in UniswapV2Router02 does not match the INIT_CODE_HASH in UniswapV2Factory, certain transactions will revert:
