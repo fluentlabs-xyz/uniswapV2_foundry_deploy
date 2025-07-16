@@ -73,6 +73,27 @@ forge create src/UniswapV2Router02.sol:UniswapV2Router02 \
 --verifier-url https://testnet.fluentscan.xyz/api/
 ```
 
+Note: UniswapV2Router02.sol is a large contract, so the `foundry.toml` settings folder should have Solidity compiler optimization runs set to 200:
+```toml
+[profile.default]
+optimizer = true
+optimizer_runs = 200
+```
+
+If this isn't set or you want to enable different compiler optimization runs for certain contracts, you can add these flags:
+```shell
+forge create src/UniswapV2Router02.sol:UniswapV2Router02 \
+--constructor-args-path src/deployConstructor/UniswapV2Router02.txt \
+--private-key $devTestnetPrivateKey \
+--rpc-url https://rpc.testnet.fluent.xyz \
+--broadcast \
+--verify \
+--verifier blockscout \
+--verifier-url https://testnet.fluentscan.xyz/api/ \
+--optimize \
+--optimizer-runs 200 
+```
+
 If contract verification fails after deployment, verify the contract at the deployed address:
  
 ```shell
