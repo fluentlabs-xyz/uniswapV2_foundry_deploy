@@ -165,12 +165,12 @@ UniswapV2Router02:
 
 https://sepolia.basescan.org/address/0x794c842Ef3EE218464068F0FFC4Bc084453CDeDD
 
-## Fluent DevNet Verified Deployments:
+## Fluent Testnet Verified Deployments:
 
 UniswapV2Factory:
 
-https://blockscout.dev.gblend.xyz/address/0x886A2bc0507C29A3685980d3E02BE8f07A94f903?tab=contract
+https://testnet.fluentscan.xyz/address/0xCcc41c8E5BeE781FAe36Af0a801C1eA523067c6F?tab=contract
 
 UniswapV2Router02:
 
-https://blockscout.dev.gblend.xyz/address/0xE00fAe47783A593f3975A13Dec9D957A437d1118?tab=contract
+https://testnet.fluentscan.xyz/address/0x9E1D1631B5d08B9Ab5f75e560434c59235ec7AA3?tab=contract
